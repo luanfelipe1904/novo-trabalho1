@@ -28,7 +28,11 @@
 		$dados = file("dados/professores.csv");
 		foreach ($dados as $linha) {
 			$colunas = explode(",", $linha);
-			$professores[] = $colunas
+			$professores = array ();
+			$professor['siape'] = $colunas[0];
+			$professor['nome'] = $colunas[1];
+			$professor['email'] = $colunas[2];
+			$professor['foto'] = $colunas[3];
 
 		}
 		return $professores;
